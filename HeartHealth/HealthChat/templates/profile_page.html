@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile_page.css') }}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+<body>
+    <div class="header">
+        <a href="{{ url_for('home') }}"><i class="fas fa-arrow-left back-button"></i></a>
+        <h1>Profile</h1>
+        <img src="/static/output-onlinepngtools (1).png" alt="Logo" class="logo"> 
+    </div>
+
+    <div class="container">
+
+        <div class="profile_edit">
+            <h2>Edit Profile</h2>
+            <div class="upload_files">
+                <input type="file" id="profile_pic" name="profile_pic" accept="image/*"/>
+                <label for="profile_pic"><i class="fas fa-upload"></i>Upload Image</label>
+                <input type="file" id="med_recs" name="med_recs" accept=".pdf,.jpg,.jpeg,.png"/>
+                <label for="med_recs"><i class="fa-regular fa-file"></i>Upload Medical Records</label>
+            </div>
+    
+            <div class="update_form">
+                <input type="text" name="name" placeholder="Name" required/>
+                <input type="text" name="surname" placeholder="Surname" required/>
+                <input type="text" name="dob" placeholder="Date of Birth: DD/MM/YYYY" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" required/>
+                <input type="text" name="email" placeholder="Email" required/>
+                <textarea placeholder="Description" name="description"></textarea>
+            </div>
+    
+            <button type="submit" id="submit">Update Profile</button>    
+
+        </div>
+
+        <div class="profile_card">
+            <div class="photo">
+                <img alt="Profile picture placeholder" src="{{ user.get('profile_picture_url', 'https://placehold.co/100x100') }}"/>
+            </div>
+           
+            <div class="profile_info">
+                <h3>Your Name</h3>
+                <p>Description</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

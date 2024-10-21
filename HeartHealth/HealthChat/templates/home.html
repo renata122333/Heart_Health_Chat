@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="nav">
+            <img src="/static/output-onlinepngtools (1).png" alt="Logo" class="logo"> 
+            <a href="{{ url_for('home') }}" class="home"><i class="fas fa-home"></i>Home</a>
+            <a href="{{ url_for('chatbot_routes.index') }}" class="chatbot"><i class="fas fa-comments"></i>ChatBot</a>
+            <a href="{{ url_for('profile_page') }}" class="profile"><i class="fas fa-user "></i>Profile</a>
+            <a href="{{ url_for('logout') }}" class="logout"><i class="fas fa-sign-out-alt"></i></a>
+        </div>
+
+        <div class="appname">
+            <h1>HEALTH CHAT</h1>
+         </div>
+    
+        <div class="paragraph">
+            <p>Welcome to Health Chat!
+                Where innovation meets critical healthcare needs. 
+                Our advanced platform utilizes cutting-edge algorithms and machine learning to analyze patient data, 
+                identifying risk factors and early warning signs of heart attacks.
+                Together, we can create a future where heart attacks are detected earlier and treated more effectively.
+            </p>
+        </div>
+
+        <div class="proceed">
+            <a href="{{ url_for('chatbot_routes.index') }}">PROCEED</a>
+        </div>
+
+        <img src="{{ url_for('static', filename='og_DUT.jpg') }}" class="dutlogo">
+    
+    </div>
+
+    <script type="module" src="{{ url_for('static', filename='firebase.js') }}"></script>
+</body>
+</html>

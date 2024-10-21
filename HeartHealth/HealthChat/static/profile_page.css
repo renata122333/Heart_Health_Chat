@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html, body {
+    margin: 0; 
+    padding: 0; 
+    height: 100%; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.header {
+    background-color: #0011FF;
+    border: none;
+    border-radius: 0 0 8px 8px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: 0; 
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.header .back-button {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    transform: translateY(-50%);
+}
+
+.back-button:hover{
+    background-color: #2222d3;
+    border-radius: 25px;
+    transform: translateY(-50%) scale(1.2);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 50px);
+    padding: 20px;
+}
+
+.profile_edit {
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 40px; 
+    margin: 10px;
+    width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.profile_edit h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.upload_files{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.upload_files input[type=file] {
+    display: none;
+}
+
+.upload_files label{
+    color: #00ced1;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.upload_files i {
+    margin-right: 10px;
+}
+
+.update_form input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #d3d3d3;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.update_form textarea{
+    height: 150px; 
+    resize: none; 
+}
+
+.profile_edit button{
+    background-color: #0000ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.profile_edit button:hover {
+    background-color: #2222d3;
+}
+
+.profile_card {
+    background-color: #0000ff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.profile_card .photo {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.profile_card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.profile_card p {
+    color: #dddddd;
+}
+
+.logo {
+    position: fixed; 
+    top: 10px; 
+    right: 10px; 
+    width: 60px; 
+    height: auto;
+}
